@@ -9,6 +9,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import br.senai.sp.jandira.dao.UsuarioDao;
+import br.senai.sp.jandira.modelo.Usuario;
+
 @WebServlet("/Autentica")
 public class Autentica extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -27,16 +30,23 @@ public class Autentica extends HttpServlet {
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		//String email = request.getParameter("txtEmail");
-		int valor1 = 10;
-		int valor2 = 30;
+		String email = request.getParameter("txtEmail");
+		String senha = request.getParameter("txtSenha");
 		
-		request.setAttribute("frase", "Estou vindo de uma Servlet");
-		request.setAttribute("v1", valor1);
-		request.setAttribute("v2", valor2);
+		UsuarioDao uDao = new UsuarioDao();
+		Usuario usuario = new Usuario();
 		
-		RequestDispatcher rd = request.getRequestDispatcher("index.jsp");
-		rd.forward(request, response);
+		usuario = uDao.autenticar(email, senha);
+		
+		if(usuario == null){
+			RequestDispatcher rd = request.getRequestDispatcher("login.html");
+			rd.forward(request, response);
+		}else{
+			RequestDispatcher rd = request.getRequestDispatcher("index.jsp");
+			rd.forward(request, response);
+		}
+		
+		
 		
 
 	}

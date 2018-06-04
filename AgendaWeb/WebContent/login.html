@@ -3,19 +3,45 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
+<link href="css/bootstrap.css" rel="stylesheet">
 </head>
 <body>
-	<form method="POST" action="Autentica">
-		<label>Nome:</label>
-		<input type="email" name="txtEmail" required="required">
-		<label>Senha:</label>
-		<input type="password" name="txtSenha" required="required">
-		<input type="submit" value="Login">	
+	<header>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2">
+					<h1>UaiContatos</h1>
+				</div>
+			</div>
+		</div>
 	
-	</form>
-	
-	<p>
-		<a href="Autentica?x=10&y=25&nome=Nicolas">Teste</a>
-	</p>
+	</header>
+	<div class="container">
+		<div class="row">
+		<div class="col-md-4"></div>
+		<div class="col-md-4">
+				<div class="well">
+					<form method="POST" action="Autentica">
+						<div class="form-group">
+							<img src="imagens/user64.png"/>
+						</div>
+						<div class="form-group">
+							<label>E-mail:</label>
+							<input class=form-control type="email" name="txtEmail" required="required">
+						</div>
+						<div class="form-group">
+							<label>Senha:</label>
+							<input class=form-control type="password" name="txtSenha" required="required">
+						</div>
+						<div class="form-group">
+							<input class="btn btn-success" type="submit" value="Login">	
+						</div>
+						<p>Não tem cadastro? Cadastre-se <a href="#">aqui</a></p>
+					</form>
+				</div>
+			</div>
+			<div class="col-md-4"></div>
+		</div>
+	</div>
 </body>
 </html>

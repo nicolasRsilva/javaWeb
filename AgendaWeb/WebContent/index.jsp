@@ -5,9 +5,9 @@
 	
 	String email = request.getParameter("txtEmail");
 	String senha = request.getParameter("txtSenha");
-	String frase = request.getAttribute("frase").toString();
+
 	
-	int soma = (int)request.getAttribute("v1") + (int)request.getAttribute("v2");
+
 	
 
 %>
@@ -19,10 +19,10 @@
 </head>
 <body>
 	<h1>Resultado:</h1>
-	<h3>E-mail: <%= email%></h3> <%//valor do igual é como se fosse o print %>
+	<h3>E-mail: <%= email%></h3> <%//valor do igual(=) é como se fosse o print %>
 	<h3>Senha: <%= senha%></h3>
-	<h3>Frase: <%= frase%></h3>
-	<h3>Soma: <%= soma %></h3>
+
+
 	
 </body>
 </html>
