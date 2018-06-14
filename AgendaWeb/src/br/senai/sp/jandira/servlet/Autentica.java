@@ -49,6 +49,7 @@ public class Autentica extends HttpServlet {
 			sessao.setAttribute("usuario", usuario);
 			RequestDispatcher rd = request.getRequestDispatcher("index.jsp");
 			rd.forward(request, response);
+			
 		}
 		
 		

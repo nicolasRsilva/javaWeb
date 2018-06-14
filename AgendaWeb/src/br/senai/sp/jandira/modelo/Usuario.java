@@ -9,6 +9,7 @@ public class Usuario {
 	private String cidade;
 	private String dtNasc;
 	
+	
 	public int getId() {
 		return id;
 	}

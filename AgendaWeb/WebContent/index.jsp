@@ -90,8 +90,8 @@
 									<td><%=contato.getId() %>
 									<td><%=contato.getNome() %>
 									<td><%=contato.getEmail() %>
-									<td><a href="editor_contato.jsp?id=<%=contato.getId()%>"><img src="imagens/add.png" height="24px" width="24px" style="margin-right: 24px;"></a>
-									<td><a href="editor_contato.jsp?id=<%=contato.getId()%>"><img src="imagens/delete.png" height="24px" width="24px" style="margin-right: 24px;"></a>
+									<td><a href="editar_contato.jsp?id=<%=contato.getId()%>"><img src="imagens/add.png" height="24px" width="24px" style="margin-right: 24px;"></a>
+									<td><a href="editar_contato.jsp?id=<%=contato.getId()%>"><img src="imagens/delete.png" height="24px" width="24px" style="margin-right: 24px;"></a>
 								</tr>
 
 					    	<%}%>
